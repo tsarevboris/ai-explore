@@ -1,3 +1,66 @@
-# Ignore virtual environments
+# --- Python ---
+__pycache__/
+*.py[cod]
+*.so
+*.pyd
+*.dll
+*.dylib
+*.egg-info/
+.build/
+dist/
+build/
+.env
+.env.*
 .venv/
 venv/
+.python-version
+
+# --- Jupyter / notebooks ---
+.ipynb_checkpoints/
+.jupyter/
+.profile_default/
+# Paired text files if you use jupytext; keep one or the other
+# *.ipynb
+# *.py
+
+# --- Data / models / outputs (keep large or generated files out) ---
+data/
+data_raw/
+data/interim/
+data/processed/
+datasets/
+inputs/
+outputs/
+models/
+checkpoints/
+runs/
+wandb/
+mlruns/
+
+# --- Logs / cache ---
+*.log
+logs/
+.cache/
+*.cache/
+__cache__/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# --- IDEs / editors ---
+.vscode/
+.idea/
+*.code-workspace
+
+# --- OS junk ---
+.DS_Store
+Thumbs.db
+
+# --- Coverage / reports ---
+.coverage
+htmlcov/
+coverage.xml
+
+# --- Docker / container ---
+*.pid
+*.pid.lock
