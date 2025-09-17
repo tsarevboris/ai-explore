@@ -106,7 +106,7 @@ print("Predictions using Scikit-Learn:\n", y_predict_sklearn)
 # Important for all features to have **similar scale** (to converge faster)
 
 # %% [markdown]
-# ## Batch Gradient Descent
+# ### Batch Gradient Descent
 # Uses the **whole training data at every step**  
 # Very slow on large training sets, but still faster than Normal equation or SVD decomposition.
 # $$
@@ -116,4 +116,40 @@ print("Predictions using Scikit-Learn:\n", y_predict_sklearn)
 # \mathbf{\Theta}^\text{(next step)} = \mathbf{\Theta} - \eta\nabla_\mathbf{\Theta}\text{MSE}(\mathbf{\Theta})
 # $$
 
+# %% [markdown]
+# ### Stochastic Gradient Descent
+
+# %% [markdown]
+# Picks **random instance** from training set on each step  
+# - much faster, but less regular 
+# - better chance of finding global minimum for irregular cost function
+# - result is not optimal, but usually good enough
+# - good for big datasets, slower on small clean data  
+#
+# Good idea is gradually reduct learning rate - **learning schedule**
+
 # %%
+from sklearn.linear_model import SGDRegressor
+
+sgd_reg = SGDRegressor(max_iter=1000, tol=1e-5, penalty=None, n_iter_no_change=100, eta0=0.01, random_state=42)
+sgd_reg.fit(X, y.ravel()) # fit expects 1D array for y
+
+sgd_reg.intercept_, sgd_reg.coef_
+
+# %% [markdown]
+# ### Mini-Batch Gradient Descent
+
+# %% [markdown]
+# Uses small random sets of instances on each step
+
+# %% [markdown]
+# ## Algorithms Comparison
+
+# %% [markdown]
+# | Algorithm | Large m | Out-of-core Support | Large n | Hyperparams | Scaling Required | Scikit-Learn |
+# |-----------|---------|---------------------|---------|--------------------|------------------|--------------|
+# | Normal Equation | Fast | No | Slow | 0 | No | N/A |
+# | SVD (Linear Algebra) | Fast | No | Slow | 0 | No | LinearRegression |
+# | Batch Gradient Descent | Slow | No | Fast | 2 (lr, epochs) | Yes | N/A |
+# | Stochastic Gradient Descent | Fast | Yes | Fast | 3+ (lr, schedule, epochs) | Yes | SGDRegressor |
+# | Mini-batch Gradient Descent | Fast | Yes | Fast | 4+ (lr, batch size, schedule, epochs) | Yes | N/A |
