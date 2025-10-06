@@ -1,5 +1,6 @@
-from sklearn.base import BaseEstimator, TransformerMixin
 import pandas as pd
+
+from sklearn.base import BaseEstimator, TransformerMixin
 
 class HighMissingDropper(BaseEstimator, TransformerMixin):
     """
@@ -72,7 +73,7 @@ class GroupedImputer(BaseEstimator, TransformerMixin):
         Imputation strategy ('median' or 'mean')
     """
     
-    def __init__(self, target_col, group_cols=['Pclass', 'Sex'], strategy='median'):
+    def __init__(self, target_col, group_cols=[], strategy='median'):
         self.target_col = target_col
         self.group_cols = group_cols
         self.strategy = strategy
