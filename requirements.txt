@@ -14,3 +14,4 @@ fastai
 graphviz
 ddgs
 voila
+gradio
