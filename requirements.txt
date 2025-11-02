@@ -10,3 +10,7 @@ transformers
 jupytext
 nbdime
 xgboost
+fastai
+graphviz
+ddgs
+voila
