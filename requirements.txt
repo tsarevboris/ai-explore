@@ -15,3 +15,5 @@ graphviz
 ddgs
 voila
 gradio
+torch
+torchvision
