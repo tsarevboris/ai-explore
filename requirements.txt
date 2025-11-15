@@ -17,3 +17,4 @@ voila
 gradio
 torch
 torchvision
+sentencepiece
