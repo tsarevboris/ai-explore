@@ -1,20 +1,26 @@
-# requirements.txt  (minimal, top-level only)
-numpy
-pandas
-scikit-learn
-matplotlib
+numpy # fundamental package for scientific computing
+pandas # working with structured and tabular data
+matplotlib # producing plots and other 2D data visualizations
+
+scipy # scientific computing and technical computing
+statsmodels # statistical modeling and econometrics
+
+scikit-learn # general-purpose machine learning library
+fastai # high-level deep learning library built on PyTorch
+torch # deep learning framework
+torchvision # computer vision library for PyTorch
+
+ipython # interactive computing
+ipykernel # IPython kernel for Jupyter
+
 seaborn
-jupyter
-ipykernel
+jupyter #
 transformers
 jupytext
 nbdime
 xgboost
-fastai
 graphviz
 ddgs
 voila
 gradio
-torch
-torchvision
 sentencepiece
