@@ -2,7 +2,8 @@
   "permissions": {
     "allow": [
       "Bash(mkdir:*)",
-      "WebSearch"
+      "WebSearch",
+      "mcp__ide__getDiagnostics"
     ],
     "deny": [],
     "ask": []
