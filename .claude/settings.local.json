@@ -3,7 +3,9 @@
     "allow": [
       "Bash(mkdir:*)",
       "WebSearch",
-      "mcp__ide__getDiagnostics"
+      "mcp__ide__getDiagnostics",
+      "Bash(cat:*)",
+      "Bash(jq:*)"
     ],
     "deny": [],
     "ask": []
