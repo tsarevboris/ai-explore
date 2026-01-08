@@ -1,3 +1,7 @@
+ipython # interactive computing
+ipykernel # IPython kernel for Jupyter
+jupyter
+
 numpy # fundamental package for scientific computing
 pandas # working with structured and tabular data
 matplotlib # producing plots and other 2D data visualizations
@@ -10,17 +14,13 @@ fastai # high-level deep learning library built on PyTorch
 torch # deep learning framework
 torchvision # computer vision library for PyTorch
 
-ipython # interactive computing
-ipykernel # IPython kernel for Jupyter
-
-seaborn
-jupyter #
-transformers
-jupytext
-nbdime
-xgboost
-graphviz
-ddgs
-voila
-gradio
-sentencepiece
+# seaborn
+# transformers
+# jupytext
+# nbdime
+# xgboost
+# graphviz
+# ddgs
+# voila
+# gradio
+# sentencepiece

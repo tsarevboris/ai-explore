@@ -5,7 +5,8 @@
       "WebSearch",
       "mcp__ide__getDiagnostics",
       "Bash(cat:*)",
-      "Bash(jq:*)"
+      "Bash(jq:*)",
+      "Bash(python:*)"
     ],
     "deny": [],
     "ask": []
